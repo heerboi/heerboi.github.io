@@ -64,10 +64,3 @@ exclude:
 
 sass:
   sass_dir: _sass
-
-
-defaults:
-  - scope:
-      path: "assets/img"
-    values:
-      image: true  
