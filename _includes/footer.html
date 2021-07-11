@@ -1,0 +1,8 @@
+<nav class = "footer">
+    <h1 class = "footer-header">Contact me here!</h4>
+    <div class = "footer-links-bar">
+        {% for item in site.data.footer-links %}
+            <a href = "{{ item.link }}" class = "footer-link" target = "_blank"><img class = "{{ item.name }}-logo footer-logo" src = "/assets/images/{{item.name}}.png"></a>
+        {% endfor %}
+    </div>
+</nav>
