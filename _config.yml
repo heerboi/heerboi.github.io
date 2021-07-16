@@ -18,11 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: HEY WADDUP
-twitter_username: jekyllrb
-github_username:  jekyll
+title: heerboi
+email: h4hero2004@yahoo.com
+description: Technical stuff and life
 
 permalink: ""
 baseurl: ""

@@ -1,10 +1,17 @@
-#about-profile-block {
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+* {
     z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+#about-profile-block {
     float: left;
     position: fixed;
     width: 300px;
     height: 100%;
-    top: 20px;
+    top: 30px;
     border-radius: 10px;
     background-color: black;
 }
@@ -12,8 +19,56 @@
 .about-profile-photo {
     border-radius: 50%;
     position: relative;
-    left: 19px;
-    top: 40px;
+    left: 22px;
+    top: 20px;
     width: 250px;
     border: 3px solid #40E0D0;
 }
+
+#about-profile-text {
+    width: 300px;
+    position: fixed;
+    display: flex;
+    flex-flow: column wrap;
+    height: fit-content;
+    top: 310px;
+}
+
+#about-profile-text > * {
+    width: 300px;
+    font-weight: 500;
+    background-color: black;
+    text-align: center;
+}
+
+#about-profile-unames > p {
+    width: fit-content;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    height: fit-content;
+    background-color: black;
+    top: 385px;
+    left: 120px;
+}
+
+#about-profile-unames a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    background-color: black;
+    width: fit-content;
+    font-weight: 200;
+    font-size: medium;
+    margin-bottom: 22px;
+    background-color: black;
+}
+
+#about-profile-unames a:hover {
+    filter: brightness(50%);
+    transition: filter .2s ease
+}
+
+
+
+
+

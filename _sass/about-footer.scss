@@ -1,41 +1,43 @@
 .footer {
     height: 13%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
     align-items: baseline;
     width: 100%;
-    z-index: 999;
+    z-index: 5;
     background-color: #000000;
     color:white;
-    position: relative;
+    position: sticky;
+    bottom: 0;
     flex-shrink: 0;
 }
 
 .footer-header {
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
+    bottom: 80px;
+    border: none;
     width: fit-content;
     position: relative;
-    left: 67px;
     background-color: inherit;
 }
 
 .footer-links-bar {
     background-color: black;
     display: flex;
-    width: fit-content !important;
+    width: fit-content;
+    bottom: 80px;
     position: relative;
-    left: 67px;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     width: inherit;
 }
 
 .footer-logo {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     background-color: black;
 }
 
@@ -45,7 +47,7 @@
 }
 
 .footer-link {
-    margin-inline-end: 10px;
+    margin-bottom: 5px;
     text-decoration: none;
     background-color: #000000;
 }
