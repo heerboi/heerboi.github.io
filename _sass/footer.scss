@@ -1,6 +1,6 @@
 .footer {
-    height: 13%;
     display: flex;
+    position: sticky;
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: baseline;
@@ -8,8 +8,9 @@
     z-index: 999;
     background-color: #000000;
     color:white;
-    position: relative;
     flex-shrink: 0;
+    flex-basis: 13%;
+    top: 250;
 }
 
 .footer-header {

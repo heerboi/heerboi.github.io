@@ -1,10 +1,10 @@
 .footer {
-    height: 13%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: baseline;
-    width: 100%;
+    height: 0;
+    width: 0;
     z-index: 5;
     background-color: #000000;
     color:white;
@@ -16,10 +16,10 @@
 .footer-header {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    bottom: 80px;
+    bottom: 250px;
     border: none;
     width: fit-content;
-    position: relative;
+    position: fixed;
     background-color: inherit;
 }
 
@@ -27,12 +27,11 @@
     background-color: black;
     display: flex;
     width: fit-content;
-    bottom: 80px;
-    position: relative;
+    bottom: 20px;
+    position: fixed;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    width: inherit;
 }
 
 .footer-logo {

@@ -5,6 +5,9 @@
     {% if page.title == "About" %}
       <link rel = "stylesheet" href = "/assets/css/about-footer.css">
     {% endif %}
+    {% if page.css_file %}
+      <link rel = "stylesheet" href = "/assets/css/{{ page.css_file }}.css">
+    {% endif %}
     <script src = "/assets/js/jquery-3.6.0.min.js"></script>
     <script src = "/assets/js/main.js"></script>
     <title>
@@ -15,3 +18,4 @@
       {% endif %}
     </title>
 </head>
+
