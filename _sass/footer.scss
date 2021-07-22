@@ -1,15 +1,16 @@
 .footer {
-    height: 13%;
     display: flex;
+    position: sticky;
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: baseline;
     width: 100%;
-    z-index: 2;
+    z-index: 999;
     background-color: #000000;
     color:white;
-    position: relative;
-    bottom: 0;
+    flex-shrink: 0;
+    flex-basis: 13%;
+    top: 250;
 }
 
 .footer-header {
@@ -17,7 +18,7 @@
     font-weight: 500;
     width: fit-content;
     position: relative;
-    left: 44px;
+    left: 67px;
     background-color: inherit;
 }
 
@@ -26,7 +27,7 @@
     display: flex;
     width: fit-content !important;
     position: relative;
-    left: 44px;
+    left: 67px;
     align-items: center;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -39,10 +40,13 @@
     background-color: black;
 }
 
+.footer-logo:hover {
+    filter: brightness(50%);
+    transition: filter .2s ease
+}
+
 .footer-link {
     margin-inline-end: 10px;
     text-decoration: none;
     background-color: #000000;
 }
-
-
