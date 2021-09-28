@@ -6,6 +6,7 @@
     align-items: baseline;
     width: 100%;
     z-index: 999;
+    min-width: calc(300px + 545px);
     background-color: #000000;
     color:white;
     flex-shrink: 0;
@@ -18,7 +19,7 @@
     font-weight: 500;
     width: fit-content;
     position: relative;
-    left: 67px;
+    left: 73px;
     background-color: inherit;
 }
 
@@ -27,7 +28,7 @@
     display: flex;
     width: fit-content !important;
     position: relative;
-    left: 67px;
+    left: 73px;
     align-items: center;
     flex-flow: row wrap;
     justify-content: flex-start;

@@ -31,14 +31,13 @@ html, body {
 // Header
 .navigation {
     display: flex;
-    width: 100%;
+    min-width: calc(300px + 545px);
     top: 0;
-    flex-shrink: 0;
-    flex-grow: 0;
     flex-basis: 50px;
     position: sticky;
+    flex-shrink: 0;
     z-index: 999;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
@@ -55,7 +54,7 @@ html, body {
 
 .nav-links {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-content: space-between;
     background-color: inherit;
 }

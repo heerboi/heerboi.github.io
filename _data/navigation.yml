@@ -1,8 +1,4 @@
 - name: About
-  link: /about.html
-- name: Certifications
-  link: /
+  link: /index.html
 - name: Posts
-  link: /
-- name: Projects
-  link: /
+  link: /posts.html
