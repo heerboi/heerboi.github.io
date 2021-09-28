@@ -22,13 +22,14 @@ title: heerboi
 email: h4hero2004@yahoo.com
 description: Technical stuff and life
 
-permalink: ""
+permalink: "/:year/:month/:day/:title:output_ext"
 baseurl: ""
 # Build settings
 plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-github-metadata
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -59,6 +60,7 @@ exclude:
   - LICENSE.md
   - README.md
 
+date_format: "%b %-d, %Y"
 
 sass:
   sass_dir: _sass

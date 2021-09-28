@@ -7,7 +7,7 @@
 }
 
 .footer {
-    display: none;
+    display: none !important;
 }
 
 .main-body {
@@ -41,6 +41,7 @@
 
 #about-profile-para {
     display: flex;
+    min-width: 500px;
     padding-top: 30px;
     flex-flow: column wrap;
 }
