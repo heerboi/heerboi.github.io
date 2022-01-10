@@ -1,0 +1,18 @@
+---
+layout: default
+title: Repositories
+css_file: repos
+---
+
+<h2 id = "title">Repositories!</h2>
+<ul class = "repo-list">
+    {% for repos in site.github.public_repositories %}
+    <li class = "repo-item">
+        <h3 class = "repo-title">
+            <a class = "repo-link" href = '{{ repos.html_url }}'>
+                {{ repos.name }}
+            </a>
+        </h3>
+    </li>
+    {% endfor %}
+</ul>
