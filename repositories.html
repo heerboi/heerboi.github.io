@@ -9,7 +9,7 @@ css_file: repos
     {% for repos in site.github.public_repositories %}
     <li class = "repo-item">
         <h3 class = "repo-title">
-            <a class = "repo-link" href = '{{ repos.html_url }}'>
+            <a class = "repo-link" href = '{{ repos.html_url }}' target = "_blank">
                 {{ repos.name }}
             </a>
         </h3>
