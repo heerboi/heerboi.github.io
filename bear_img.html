@@ -1,0 +1,39 @@
+---
+layout: default
+title: Bear Classification
+css_file: img_project
+---
+<h2 id = "title">Which bear is it?</h2>
+<div id = "upload-sent">
+<label for = "bear_img_upload" id = "file-upl" class = "custom-file-upload">
+    &nbsp;Upload&nbsp;
+</label>
+<input id="bear_img_upload" type="file"/>
+<h2 id = "upload-sent-end">
+    &nbsp;a bear picture here!
+</h2>
+</div>
+<div id = "results"></div>
+<script>
+    async function loaded(reader) {
+    document.getElementById('file-upl').style.display = "none";
+    document.getElementById('upload-sent-end').style.display = "none";
+    results.innerHTML = `<br/><h2 id = "uploading-img-1">Your bear is being processed.</h2><br/><br/><img id = "bear-loading-ani" src = "/assets/images/bear_loading.png" width = "400"><br/><br/><h2 id = "uploading-img-2">Have some patience!</h2>`;
+        const response = await fetch('https://hf.space/embed/heerboi/starting-somewhere/+/api/predict', {
+            method: "POST", body: JSON.stringify({'data' : [reader.result]}),
+            headers: {"Content-Type" : "application/json"}
+        });
+    const json = await response.json();
+    const label = json['data'][0]['confidences'][0]['label'];
+    results.innerHTML = `<br/><br/><img src = "${reader.result}" width = "300">`;
+    results.innerHTML += `<div id = "result"><h2 class = "bear-pred-1">That's a&nbsp;</h2><h2 id = "bear-pred">${label}</h2><h2 class = "bear-pred-1">&nbsp;bear!</h2></div><br/>`;
+    document.getElementById('file-upl').style.display = "initial";
+    document.getElementById('upload-sent-end').style.display = "initial";
+    }
+    function read() {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => loaded(reader));
+        reader.readAsDataURL(bear_img_upload.files[0]);
+    }
+    bear_img_upload.addEventListener('input', read);
+</script>
