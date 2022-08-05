@@ -4,5 +4,7 @@
   link: /posts.html
 - name: Repositories
   link: /repositories.html
+- name: Live Projects
+  link: /projects.html
 - name: Resume
   link: /assets/pdf/resume.pdf

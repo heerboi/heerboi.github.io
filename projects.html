@@ -1,0 +1,18 @@
+---
+layout: default
+title: Live Projects
+css_file: proj
+---
+
+<h2 id = "title">Live Projects!</h2>
+<ul class = "proj-list">
+    {% for proj in site.data.projects %}
+    <li class = "proj-item">
+        <h3 class = "proj-title">
+            <a class = "proj-link" href = '{{ proj.link }}'>
+                {{ proj.name }}
+            </a>
+        </h3>
+    </li>
+    {% endfor %}
+</ul>
