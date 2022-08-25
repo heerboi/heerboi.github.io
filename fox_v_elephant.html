@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Bear Classification
+title: Fox vs. Elephant
 css_file: img_project
 ---
-<h2 id = "title">Which bear is it?</h2>
+<h2 id = "title">Is it a fox or an elephant?</h2>
 <div id = "upload-sent">
 <label for = "proj_img_upload" id = "file-upl" class = "custom-file-upload">
     &nbsp;Upload&nbsp;
 </label>
 <input id="proj_img_upload" type="file"/>
 <h2 id = "upload-sent-end">
-    &nbsp;a bear picture here!
+    &nbsp;a picture here!
 </h2>
 </div>
 <div id = "results"></div>
@@ -18,15 +18,15 @@ css_file: img_project
     async function loaded(reader) {
     document.getElementById('file-upl').style.display = "none";
     document.getElementById('upload-sent-end').style.display = "none";
-    results.innerHTML = `<br/><h2 id = "uploading-img-1">Your bear is being processed.</h2><br/><br/><img id = "proj-loading-ani" src = "/assets/images/bear_loading.png" width = "400"><br/><br/><h2 id = "uploading-img-2">Have some patience!</h2>`;
-        const response = await fetch('https://hf.space/embed/heerboi/starting-somewhere/+/api/predict', {
+    results.innerHTML = `<br/><h2 id = "uploading-img-1">Your photo is being processed.</h2><br/><br/><img id = "normal-loading-ani" src = "/assets/images/loading.png" width = "50"><br/><br/><br/><br/><h2 id = "uploading-img-2">Have some patience!</h2>`;
+        const response = await fetch('https://hf.space/embed/heerboi/Fox-vs-Elephant/+/api/predict', {
             method: "POST", body: JSON.stringify({'data' : [reader.result]}),
             headers: {"Content-Type" : "application/json"}
         });
     const json = await response.json();
     const label = json['data'][0]['confidences'][0]['label'];
     results.innerHTML = `<br/><br/><img src = "${reader.result}" width = "300">`;
-    results.innerHTML += `<div id = "result"><h2 class = "proj-pred-1">That's a&nbsp;</h2><h2 id = "proj-pred">${label}</h2><h2 class = "proj-pred-1">&nbsp;bear!</h2></div><br/>`;
+    results.innerHTML += `<div id = "result"><h2 class = "proj-pred-1">That's a&nbsp;</h2><h2 id = "proj-pred">${label}</h2><h2 class = "proj-pred-1">!</h2></div><br/>`;
     document.getElementById('file-upl').style.display = "initial";
     document.getElementById('upload-sent-end').style.display = "initial";
     }
