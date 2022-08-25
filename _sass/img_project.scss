@@ -32,18 +32,18 @@ input[type="file"] {
     font-weight: 200;
 }
 
-#bear-pred {
+#proj-pred {
     font-weight: 300;
     margin-bottom: 2px;
     border-bottom: 2px solid black;
 }
-#bear-pred:hover {
+#proj-pred:hover {
     color: white;
     border-bottom: 2px solid white;
     transition: border-bottom .5s ease-out;
 }
 
-.bear-pred-1 {
+.proj-pred-1 {
     font-weight: 200;
 }
 
@@ -78,7 +78,7 @@ input[type="file"] {
     width: fit-content;
 }
 
-#bear-loading-ani {
+#proj-loading-ani {
     width: 120px;
     height: 120px;
     position: relative;
@@ -90,3 +90,28 @@ input[type="file"] {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+#normal-loading-ani {
+    animation-name: spinning-circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 158.4px;
+  }
+  
+  @keyframes spinning-circle {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transform-origin: 125% 125%;
+      transform-origin: 125% 125%;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      -webkit-transform-origin: 125% 125%;
+      transform-origin: 125% 125%;
+    }
+  }
